@@ -1,0 +1,30 @@
+{ "evlConfig": { "password": "XXXXXXXX",
+                 "serverpassword": "XXXXXXX",
+                 "actualhost": "10.1.1.7",
+                 "actualport": 4025,
+                 "serverhost":"0.0.0.0",
+                 "serverport": 4000,
+                 "zone": 6,
+                 "partition" : 1,
+                 "proxyenable" : true,
+                 "atomicEvents" : true,
+                 "logging" : false
+               },
+  "mqtt": { "serverUrl": "mqtt:10.1.1.186:1883",
+            "controlTopic": "house/alarm/control",
+            "rawZoneTopic": "house/alarm/zone",
+            "rawPartTopic": "house/alarm/part",
+            "topicMap": { "6-609": {"topic": "house/alarm/zone/6", "message": "on"},
+                          "6-610": {"topic": "house/alarm/zone/6", "message": "off"},
+                          "part-655": {"topic": "house/alarm/part", "message": "disarmed"}
+                        }
+          },
+ "sms": { "arm": true,
+          "alarm": true,
+          "disarm": true }, 
+ "voipms": { "user": "XXXXXXXXXXX",
+              "password": "XXXXXX",
+              "did": "XXXXXXXXXX",
+              "dst": "XXXXXXXXXX" }
+
+}
