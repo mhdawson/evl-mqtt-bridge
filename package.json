@@ -1,0 +1,44 @@
+{
+  "name": "evl-mqtt-bridge",
+  "version": "0.0.1",
+  "description": "bridge from evisalink to mqtt",
+  "main": "lib/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/server.js"
+  },
+  "dependencies": {
+    "micro-app-framework": "^0.1.1",
+    "socket.io": "~1.3.7",
+    "mqtt": "~1.6.3",
+    "twilio": "^2.2.0",
+    "nodealarmproxy": "~0.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/evl-mqtt-bridge.git"
+  },
+  "keywords": [
+    "iot",
+    "mqtt",
+    "envisalink",
+    "dashboard",
+    "micro-app",
+    "sensor",
+    "alarm",
+    "twillio",
+    "sms"
+  ],
+  "author": "Michael Dawson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/evl-mqtt-bridge/issues"
+  },
+  "homepage": "https://github.com/mhdawson/evl-mqtt-bridge#readme",
+  "contributors": [
+    {
+      "name": "Michael Dawson",
+      "email": "mdawson@devrus.com"
+    }
+  ]
+}
