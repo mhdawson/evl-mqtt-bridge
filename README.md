@@ -89,7 +89,8 @@ The parameters are as follows:
   "topicMap": { "6-609": {"topic": "house/alarm/zone/6", "message": "on"},
                           "6-610": {"topic": "house/alarm/zone/6", "message": "off"},
                           "part-655": {"topic": "house/alarm/part", "message": "disarmed"}
-                        }```
+                        }
+  ```
 
 Raw commands can be sent to the alarm by posting the string for the command on the ```controlTopic```.  In addition the brige supports the following 'friendly name' commands:
 
