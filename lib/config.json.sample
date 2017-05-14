@@ -16,15 +16,16 @@
             "rawPartTopic": "house/alarm/part",
             "topicMap": { "6-609": {"topic": "house/alarm/zone/6", "message": "on"},
                           "6-610": {"topic": "house/alarm/zone/6", "message": "off"},
-                          "part-655": {"topic": "house/alarm/part", "message": "disarmed"}
+                          "part-655": {"topic": "house/alarm/part", "message": "disarmed"},
+                          "1-609": {"topic": "house/2262/350/FFFF1FFFFFFF", "message": "FFFF1FFFFFFF"}
                         }
           },
- "sms": { "arm": true,
-          "alarm": true,
-          "disarm": true }, 
- "voipms": { "user": "XXXXXXXXXXX",
-              "password": "XXXXXX",
-              "did": "XXXXXXXXXX",
-              "dst": "XXXXXXXXXX" }
-
+  "sms": { "arm": true,
+           "alarm": true,
+           "disarm": true },
+  "notify": {
+    "mqttSmsBridge": { "enabled": true,
+                       "serverUrl": "mqtt:10.1.1.186:1883",
+                       "topic": "house/sms" }
+  }
 }

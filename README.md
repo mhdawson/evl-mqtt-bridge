@@ -119,15 +119,45 @@ For example:
          "disarm": true }
 ```
 
-### voipms
+### notify
 
-This section configures the information required to send an sms
-message through your voip.ms account.  The fields are:
+This section configures the information required to send
+notification messages. The fields are:
 
-* **user** - voip.ms api user id.
-* **password** - voip.ms api password.
-* **did** - number from which the sms will be sent.
-* **dst** - number to which the sms will be sent.
+* **mqttSmsBridge** - element with the following sub-elements:
+  * enabled - set to true if you want notifications to
+    be sent using this provider.
+  * serverUrl - url for the mqtt server to which the
+    bridge is connected.
+  * topic - topic on which the bridge listens for
+    notification requests.
+  * certs - directory which contains the keys/certs
+    required to connect to the mqtt server if the
+    url is of type `mqtts`.
+* **voipms** - element with the following sub-elements:
+  * enabled - set to true if you want notifications to
+    be sent using this provider.
+  * user - voip.ms API userid.
+  * password - voip.ms API password.
+  * did - voip.ms did(number) from which the SMS will be sent.
+  * dst - number to which the SMS will be sent.
+* **twilio** - element with the following sub-elements:
+  * enabled - set to true if you want notifications to
+    be sent using this provider.
+  * accountSID - twilio account ID.
+  * accountAuthToken - twilio auth token.
+  * toNumber - number to which the SMS will be sent.
+  * fromNumber - number from which the SMS will be sent.
+
+For example:
+
+```json
+"notify": {
+  "mqttSmsBridge": { "enabled": true,
+                     "serverUrl": "mqtt:10.1.1.186:1883",
+                     "topic": "house/sms" }
+}
+```
 
 ## TODO
 
