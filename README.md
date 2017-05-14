@@ -42,7 +42,7 @@ The configuration file has the following main sections:
 * **evlConfig**
 * **mqtt**
 * **sms**
-* **voipms**
+* **notify**
 
 ### evlConfig
 
